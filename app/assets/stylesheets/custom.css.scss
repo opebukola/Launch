@@ -1,0 +1,117 @@
+@import "bootstrap";
+
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 40px;
+  background-color: #F7F7F7;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+#logo{
+  padding: 0px 20px;
+  text-align: center;
+}
+.center {
+  text-align: center;
+  padding: 20px 10px 10px 10px;
+  margin-bottom: 50px;
+  h1 {
+    margin-bottom: 15px;
+  }
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+  a {
+    color: $gray;
+    &:hover { 
+      color: $grayDarker;
+    }
+  }  
+  small { 
+    float: left; 
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+
+/** boxes on home pages **/
+.box {
+  border: solid 1px #fff;
+  border-radius: 10px;
+  background-color: #32B2C6;
+  width: 230px;
+  padding: 10px 10px 10px 10px;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  h3 {
+    margin-top: 10px;
+  }
+  .main{
+  	font-weight: bold;
+  }
+}
+
+.boxesarea{
+  width: 90%; 
+  margin: 0px auto;
+}
+
+.btn-signup{
+  color: #32B2C6;
+}
