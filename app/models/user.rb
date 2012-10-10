@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   #mailchimp
   after_create :add_user_to_mailchimp unless Rails.env.test?
-  before_destroy :remove_user_from_mailchimp unless Rails.env.test?
+
 
   private
   	def add_user_to_mailchimp
@@ -16,15 +16,6 @@ class User < ActiveRecord::Base
 	      gb.list_subscribe(:id => list_id, :email_address => self.email, 
 	      	:merge_vars => {'fname' => '', 'lname' => '' }, 
 	      	:email_type => "html",  :double_optin => false, :send_welcome => true)
-	    end
-  	end
-
-  	def remove_user_from_mailchimp
-	    unless self.email.include?('@example.com')
-	      mailchimp = Hominid::API.new(ENV["MAILCHIMP_API_KEY"])
-	      list_id = mailchimp.find_list_id_by_name "prelaunch"
-	      result = mailchimp.list_unsubscribe(list_id, self.email, true, false, true)  
-	      Rails.logger.info("MAILCHIMP UNSUBSCRIBE: result #{result.inspect} for #{self.email}")
 	    end
   	end
 end
