@@ -11,11 +11,11 @@ class User < ActiveRecord::Base
   private
   	def add_user_to_mailchimp
   		unless self.email.include?('@example.com')
-	      mailchimp = Hominid::API.new(ENV["MAILCHIMP_API_KEY"])
-	      list_id = mailchimp.find_list_id_by_name "prelaunch"
-	      info = { }
-	      result = mailchimp.list_subscribe(list_id, self.email, info, 'html', false, true, false, true)
-	      Rails.logger.info("MAILCHIMP SUBSCRIBE: result #{result.inspect} for #{self.email}")
+	      gb = Gibbon.new
+	      list_id = gb.lists({:list_name => "PreLaunch"})["data"].first["id"]
+	      gb.list_subscribe(:id => list_id, :email_address => self.email, 
+	      	:merge_vars => {'fname' => '', 'lname' => '' }, 
+	      	:email_type => "html",  :double_optin => false, :send_welcome => true)
 	    end
   	end
 

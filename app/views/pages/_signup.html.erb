@@ -1,9 +1,10 @@
-<section>
+<section class="center" id="submit-section">
 	<h2>We’re launching with AP Classes! Sign up below to be the first to try out CourseSky!
 	</h2>
-
-	<%= simple_form_for @user do |f| %>
-	  <%= f.input :email, label: false, :placeholder => 'Type your email here...' %>
-	  <%= f.submit "Notify Me!", class: 'btn btn-large btn-signup'%>
-	<% end %>
+	<div id="submit-form">
+		<%= simple_form_for @user, remote: true do |f| %>
+		  <%= f.input :email, label: false, :placeholder => 'Type your email here...', input_html: {class: "signup_form"} %>
+		  <%= f.submit "Notify Me", class: 'btn btn-large btn-signup' %>
+		<% end %>
+	</div>
 </section>

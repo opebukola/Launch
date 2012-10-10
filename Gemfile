@@ -5,7 +5,7 @@ gem 'pg'
 gem 'jquery-rails'
 gem 'simple_form'
 gem "jquery-datatables-rails"
-gem "hominid"
+gem "gibbon"
 
 
 

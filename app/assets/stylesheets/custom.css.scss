@@ -30,7 +30,7 @@ textarea {
 .center {
   text-align: center;
   padding: 20px 10px 10px 10px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   h1 {
     margin-bottom: 15px;
   }
@@ -50,6 +50,7 @@ h1 {
   font-size: 2.7em;
   letter-spacing: -2px;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 h2 {
@@ -79,9 +80,6 @@ footer {
       color: $grayDarker;
     }
   }  
-  small { 
-    float: left; 
-  }
   ul {
     float: right;
     list-style: none;
@@ -94,27 +92,66 @@ footer {
 
 /** boxes on home pages **/
 .box {
-  border: solid 1px #fff;
-  border-radius: 10px;
-  background-color: #32B2C6;
+  border: solid 1px #ccc;
   width: 230px;
-  padding: 10px 10px 10px 10px;
   float: left;
+  border-radius: 10px;
+  padding: 10px 10px 10px 10px;
   margin-right: 15px;
-  margin-bottom: 20px;
-  h3 {
-    margin-top: 10px;
-  }
+  margin-bottom: 15px;
+  &:hover { 
+      background-color: #32B2C6;
+    }
   .main{
   	font-weight: bold;
   }
 }
+
+.btn-signup{
+  background-color: #741885;
+  background: #741885;
+  font-size: 18px;
+  color: white;
+  text-shadow: none;
+  margin-left: 0px;
+  /**float: right;**/
+}
+
+.signup_form{
+  width: 300px;
+  padding: 5px 5px;
+}
+input#user_email.string.email.required{
+  border: 4px solid #741885;
+  height: 30px;
+  line-height: 20px;
+  font-size: 15px;
+  float: left;
+  vertical-align: middle;
+}
+#submit-form{
+  width: 55%;
+  margin: 0px auto;
+  text-align: center;
+}
+
 
 .boxesarea{
   width: 90%; 
   margin: 0px auto;
 }
 
-.btn-signup{
-  color: #32B2C6;
+.thanks{
+  border: 4px solid #741885;
+  box-shadow: 0 0 4px #4B4B4B;
+  background-color: white;
+  padding: 5px 5px 5px 5px;
+}
+
+.share_buttons{
+  width: 15%;
+  margin: 0px auto;
+}
+.twitter-share-button{
+  float: left;
 }

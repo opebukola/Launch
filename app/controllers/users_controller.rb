@@ -8,10 +8,14 @@ class UsersController < ApplicationController
 
 	def create
 		@user = User.new(params[:user])
-		if @user.save
-			redirect_to :back, notice: "Thanks!"
-		else
-			render 'new'
+		respond_to do |format|
+			if @user.save
+				format.html { redirect_to :back, notice: 'Thanks!'}
+				format.js 
+			else
+				format.html { render 'new'}
+				format.js 
+			end
 		end
 	end
 end

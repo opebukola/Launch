@@ -42,8 +42,16 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    gibbon (0.3.5)
+      httparty (> 0.6.0)
+      httparty (> 0.6.0)
+      json (> 1.4.0)
+      json (> 1.4.0)
+      rdoc
     hike (1.2.1)
-    hominid (3.0.4)
+    httparty (0.9.0)
+      multi_json (~> 1.0)
+      multi_xml
     i18n (0.6.1)
     journey (1.0.4)
     jquery-datatables-rails (1.11.1)
@@ -58,6 +66,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.19)
     multi_json (1.3.6)
+    multi_xml (0.5.1)
     pg (0.14.1)
     polyglot (0.3.3)
     rack (1.4.1)
@@ -114,7 +123,7 @@ DEPENDENCIES
   annotate
   bootstrap-sass
   coffee-rails (~> 3.2.1)
-  hominid
+  gibbon
   jquery-datatables-rails
   jquery-rails
   pg
